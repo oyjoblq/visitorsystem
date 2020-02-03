@@ -91,7 +91,7 @@ $(document).ready(function(){
   });
   // Escape keyboard key
   $(document).keyup(function(e){
-    if (e.keyCode == 27){
+    if (e.keyCode === 27){
       hide_lightbox();
     }
   });
@@ -117,7 +117,7 @@ $(document).ready(function(){
       type:         'get'
     });
     request.done(function(output){
-      if (output.result == 'success'){
+      if (output.result === 'success'){
         $('.lightbox_content h2').text('Edit Visitor');
         $('#form_visitor button').text('Edit Visitor');
 		$('#form_visitor').attr('class', 'form edit');
@@ -149,7 +149,7 @@ $(document).ready(function(){
   $(document).on('submit', '#form_visitor.edit', function(e){
     e.preventDefault();
     // Validate form
-    if (form_visitor.valid() == true){
+    if (form_visitor.valid() === true){
       // Send edited visitor information to database
       hide_ipad_keyboard();
       hide_lightbox();
@@ -165,7 +165,7 @@ $(document).ready(function(){
         type:         'get'
       });
       request.done(function(output){
-        if (output.result == 'success'){
+        if (output.result === 'success'){
           // Reload datable
           	table_visitors.api().ajax.reload(function(){
             hide_loading_message();
@@ -201,7 +201,7 @@ $(document).ready(function(){
         type:         'get'
       });
       request.done(function(output){
-        if (output.result == 'success'){
+        if (output.result === 'success'){
           // Reload datable
           table_visitors.api().ajax.reload(function(){
             hide_loading_message();
