@@ -140,7 +140,8 @@
 			 						$result1 = mysqli_query($conn, "SELECT StateName FROM USState order by StateName");	
 									while($row = mysqli_fetch_array($result1)) 
 									{		 
-					 					$IDIssuerS = $_POST['IDIssuerS'] ?? ''; 		 
+					 					//$IDIssuerS = $_POST['IDIssuerS'] ?? ''; 
+										$IDIssuerS = $_POST['IDIssuerS']; 
 					 					if($row['StateName'] ==  $IDIssuerS)
 										{
          				 					$isSelected = 'selected="selected"';
@@ -170,7 +171,8 @@
 									$result2 = mysqli_query($conn, "SELECT ShortName FROM Country order by ShortName");	
 	 								while($row = mysqli_fetch_array($result2)) 
 									{		 
-		 								$IDIssuerC = $_POST['IDIssuerC'] ?? '';		 
+		 								//$IDIssuerC = $_POST['IDIssuerC'] ?? '';
+										$IDIssuerC = $_POST['IDIssuerC'];	
 				 						if($row['ShortName'] == $IDIssuerC)
 				 						{
          			 						$isSelected2 = 'selected="selected"'; 
