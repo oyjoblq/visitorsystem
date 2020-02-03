@@ -45,6 +45,7 @@ $(document).ready(function(){
   form_visitor.validate();
 
   // Show message
+  var timeout_message;
   function show_message(message_text, message_type){
     $('#message').html('<p>' + message_text + '</p>').attr('class', message_type);
     $('#message_container').show();
